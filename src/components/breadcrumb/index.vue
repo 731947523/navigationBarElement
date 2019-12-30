@@ -24,9 +24,8 @@ export default {
   },
   methods: {
     activeRoute(to, from) {
-      console.log("目的页面", to);
+      // console.log("目的页面", to, to.matched);
       this.routeList = to.matched;
-      // console.log('当前页面',from)
     }
   }
 };

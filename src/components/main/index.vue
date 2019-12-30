@@ -1,5 +1,5 @@
 <template>
-  <el-submenu class="li" :index="item.title" v-if="item.children">
+  <el-submenu class="li" :index="item.index" v-if="item.children">
     <template slot="title">
       <i :class="item.iconClass"></i>
       <span>{{ item.title }}</span>
@@ -8,7 +8,7 @@
       <default-home v-for="(item,index) in item.children" :item="item" :key="index"></default-home>
     </template>
   </el-submenu>
-  <el-menu-item v-else :index="item.title">
+  <el-menu-item v-else :index="item.index">
     <router-link :to="{ path: item.path }" class="cxs-a-line">
       <i :class="item.iconClass"></i>
       <span>{{ item.title }}</span>
@@ -24,6 +24,12 @@ export default {
   },
   mounted() {
     // console.log(this.$route, 3333);
+  },
+  methods: {
+    setAddress(param) {
+      console.log(param, "最终点击的设置值");
+      // localStorage.setItem("localAddress", JSON.stringify(to.matched));
+    }
   }
 };
 </script>
