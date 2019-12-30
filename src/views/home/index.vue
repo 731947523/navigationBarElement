@@ -1,4 +1,8 @@
 <template>
+  <!-- <div>
+    <default-home v-for="(item, index) in list" :key="index" :item="item"></default-home>
+  </div>-->
+
   <el-menu default-active="2" class="el-menu-vertical-demo">
     <default-home v-for="(item, index) in list" :key="index" :item="item"></default-home>
   </el-menu>
