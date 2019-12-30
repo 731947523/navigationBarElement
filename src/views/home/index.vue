@@ -1,8 +1,7 @@
 <template>
-    <el-menu default-active="2" class="el-menu-vertical-demo" >
-      <default-home v-for="(item, index) in list" :key="index" :item='item'>
-      </default-home>
-    </el-menu>
+  <el-menu default-active="2" class="el-menu-vertical-demo">
+    <default-home v-for="(item, index) in list" :key="index" :item="item"></default-home>
+  </el-menu>
 </template>
 <script>
 import defaultHome from "@/components/main/index.vue";
@@ -32,11 +31,11 @@ export default {
               children: [
                 {
                   title: "选项二_一",
-                  path: "/dao1/xuan2/child1",
+                  path: "/dao1/xuan2/child1"
                 },
                 {
                   title: "选项二_二",
-                  path: "/dao1/xuan2/child2",
+                  path: "/dao1/xuan2/child2"
                 }
               ]
             }
