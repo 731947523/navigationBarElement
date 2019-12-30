@@ -4,7 +4,7 @@
   </div>-->
 
   <el-menu default-active="2" class="el-menu-vertical-demo">
-    <default-home v-for="(item, index) in list" :key="index" :item="item"></default-home>
+    <default-home v-for="(item, index) in list" :key="index" :item="item">{{item.title}}</default-home>
   </el-menu>
 </template>
 <script>
@@ -32,6 +32,7 @@ export default {
             },
             {
               title: "选项二",
+              iconClass: "",
               children: [
                 {
                   title: "选项二_一",
