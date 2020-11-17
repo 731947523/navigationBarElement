@@ -1,15 +1,15 @@
 <template>
   <div id="app">
     <el-container class="box">
-      <el-header>晨曦-----------头部</el-header>
+      <!-- <el-header>晨曦-----------头部</el-header> -->
       <el-container class="el-main-box">
-        <el-aside width="200px" style="height:100%">
-          <!-- 左侧导航 -->
-          <app-home></app-home>
-        </el-aside>
+        <!-- <el-aside width="200px" style="height:100%"> -->
+        <!-- 左侧导航 -->
+        <!-- <app-home></app-home>
+        </el-aside> -->
         <el-main>
           <!-- 面包屑 -->
-          <breadcrumb></breadcrumb>
+          <!-- <breadcrumb></breadcrumb> -->
           <router-view />
         </el-main>
       </el-container>
