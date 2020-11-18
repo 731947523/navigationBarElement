@@ -58,7 +58,6 @@ export default {
 
   .box {
     height: 100%;
-
     .el-header {
       height: 60px;
       line-height: 60px;
