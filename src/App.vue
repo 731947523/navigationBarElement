@@ -55,7 +55,7 @@ export default {
 <style lang="less" scoped>
 #app {
   height: 100%;
-
+  color: red;
   .box {
     height: 100%;
     .el-header {
