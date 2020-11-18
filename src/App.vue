@@ -25,6 +25,7 @@
         <!-- <app-home></app-home>
         </el-aside> -->
         <el-main>
+          <!-- 准备测试今天所看的自定义指令 -->
           <!-- 面包屑 -->
           <!-- <breadcrumb></breadcrumb> -->
           <router-view />
