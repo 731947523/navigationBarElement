@@ -16,66 +16,39 @@ const router = new Router({
       component: resolve => require(["@/views/default/index"], resolve)
     },
     {
-      path: "/dao1",
+      path: "/Base",
       meta: {
         title: "导航一"
       },
-      component: resolve => require(["@/views/daohang/dao1/index"], resolve),
+      component: resolve => require(["@/views/daohang/Base/index"], resolve),
       children: [
         {
-          path: "xuan1",
+          path: "/Base/slot",
           meta: {
-            title: "选项一"
+            title: "插槽"
           },
-          component: resolve => require(["@/views/daohang/dao1/xuan1/index"], resolve)
+          component: resolve =>
+            require(["@/views/daohang/Base/slot/index"], resolve)
         },
         {
-          path: "xuan2",
+          path: "/Base/directive",
           meta: {
-            title: "选项二"
+            title: "指令"
           },
-          component: resolve => require(["@/views/daohang/dao1/xuan2/index"], resolve),
+          component: resolve =>
+            require(["@/views/daohang/Base/directive/index"], resolve),
           children: [
-            {
-              path: "child2",
-              meta: {
-                title: "选项二_子二"
-              },
-              component: resolve => require(["@/views/daohang/dao1/xuan2/child2/index"], resolve)
-            },
-            {
-              path: "child1",
-              meta: {
-                title: "选项二_子一"
-              },
-              component: resolve => require(["@/views/daohang/dao1/xuan2/child1/index"], resolve)
-            }
+            // {
+            //   path: "child2",
+            //   meta: {
+            //     title: "选项二_子二"
+            //   },
+            // component: resolve =>
+            // require(["@/views/daohang/dao1/xuan2/child2/index"], resolve)
+            // }
           ]
         }
       ]
-    },
-    {
-      path: "/dao2",
-      meta: {
-        title: "导航二"
-      },
-      component: resolve => require(["@/views/daohang/dao2/index"], resolve),
-      children: [
-        {
-          path: "xuan1",
-          meta: {
-            title: "选项1"
-          },
-          component: resolve => require(["@/views/daohang/dao2/xuan1/index"], resolve)
-        }
-      ]
-    },
-    {
-      path: "/dao3/index",
-      meta: {
-        title: "导航三"
-      },
-      component: resolve => require(["@/views/daohang/dao3/index"], resolve)
     }
   ]
 });

@@ -1,29 +1,12 @@
 <template>
   <div id="app">
     <el-container class="box">
-      <message :title="'标题'">
-        <template>
-          插槽 必须要以template为外层---后面为具名插槽
-        </template>
-        <!-- 具名插槽 -->
-        <template v-slot:head>
-          <div>
-            页面head
-          </div>
-        </template>
-        <template v-slot:foot>
-          <p>
-            页面底部
-          </p>
-        </template>
-        <!-- 作用于插槽 -->
-      </message>
-      <!-- <el-header>晨曦-----------头部</el-header> -->
+      <el-header>晨曦-----------头部</el-header>
       <el-container class="el-main-box">
-        <!-- <el-aside width="200px" style="height:100%"> -->
-        <!-- 左侧导航 -->
-        <!-- <app-home></app-home>
-        </el-aside> -->
+        <el-aside width="200px" style="height:100%">
+          <!-- 左侧导航 -->
+          <app-home></app-home>
+        </el-aside>
         <el-main>
           <!-- 准备测试今天所看的自定义指令 -->
           <!-- 面包屑 -->
@@ -38,12 +21,10 @@
 <script>
 import AppHome from "./views/home/index";
 import breadcrumb from "@/components/breadcrumb/index";
-import message from "@/views/solt/index";
 export default {
   components: {
     AppHome,
-    breadcrumb,
-    message
+    breadcrumb
   },
   data() {
     return {

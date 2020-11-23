@@ -5,7 +5,11 @@
       <span>{{ item.title }}</span>
     </template>
     <template v-if="item.children">
-      <default-home v-for="(item,index) in item.children" :item="item" :key="index"></default-home>
+      <default-home
+        v-for="(item, index) in item.children"
+        :item="item"
+        :key="index"
+      ></default-home>
     </template>
   </el-submenu>
   <el-menu-item v-else :index="item.index">
@@ -21,15 +25,6 @@ export default {
   name: "defaultHome",
   data() {
     return {};
-  },
-  mounted() {
-    // console.log(this.$route, 3333);
-  },
-  methods: {
-    setAddress(param) {
-      console.log(param, "最终点击的设置值");
-      // localStorage.setItem("localAddress", JSON.stringify(to.matched));
-    }
   }
 };
 </script>

@@ -6,7 +6,9 @@
     @open="handleOpen"
     @select="handleSelect"
   >
-    <default-home v-for="(item, index) in list" :key="index" :item="item">{{item.title}}</default-home>
+    <default-home v-for="(item, index) in list" :key="index" :item="item">
+      {{ item.title }}
+    </default-home>
   </el-menu>
 </template>
 <script>
@@ -19,39 +21,40 @@ export default {
     return {
       list: [
         {
-          title: "概况",
+          title: "Vue",
           index: "0",
           iconClass: "el-icon-setting",
           path: "/default"
         },
         {
-          title: "导航一",
+          title: "基础",
           index: "1",
           iconClass: "el-icon-location",
           children: [
             {
-              title: "选项一",
+              title: "插槽",
               index: "1-1",
               iconClass: "",
-              path: "/dao1/xuan1"
+              path: "/Base/slot"
             },
             {
-              title: "选项二",
+              title: "自定义指令",
+              index: "1-1",
               iconClass: "",
-              index: "1-2",
-              children: [
-                {
-                  title: "选项二_一",
-                  index: "1-2-1",
-                  path: "/dao1/xuan2/child1"
-                },
-                {
-                  title: "选项二_二",
-                  index: "1-2-2",
-                  path: "/dao1/xuan2/child2"
-                }
-              ]
+              path: "/Base/directive"
             }
+            // {
+            //   title: "自定义指令",
+            //   iconClass: "",
+            //   index: "1-2",
+            //   children: [
+            //     {
+            //       title: "选项二_二",
+            //       index: "1-2-2",
+            //       path: "/dao1/xuan2/child2"
+            //     }
+            //   ]
+            // }
           ]
         },
         {
