@@ -42,6 +42,12 @@ export default {
               index: "1-1",
               iconClass: "",
               path: "/Base/directive"
+            },
+            {
+              title: "CForm表单",
+              index: "1-1",
+              iconClass: "",
+              path: "/Base/form"
             }
             // {
             //   title: "自定义指令",

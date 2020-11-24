@@ -31,6 +31,14 @@ const router = new Router({
             require(["@/views/daohang/Base/slot/index"], resolve)
         },
         {
+          path: "/Base/form",
+          meta: {
+            title: "实现表单"
+          },
+          component: resolve =>
+            require(["@/views/daohang/Base/form/index"], resolve)
+        },
+        {
           path: "/Base/directive",
           meta: {
             title: "指令"
