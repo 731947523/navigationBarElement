@@ -2,6 +2,7 @@ import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
+// 自定义指令
 import directive from "./utils/directive";
 import "./style/reset.css";
 for (const key in directive) {
@@ -11,6 +12,9 @@ for (const key in directive) {
 import Myplugin from "./utils/plugin";
 // Myplugin(Vue);
 Vue.use(Myplugin);
+// 创建notice组件
+import createNotice from "@/utils/createNotice";
+Vue.prototype.$createNotice = createNotice;
 //  引入element-ui
 import ElementUI from "element-ui";
 import "element-ui/lib/theme-chalk/index.css";

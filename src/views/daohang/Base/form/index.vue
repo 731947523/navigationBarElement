@@ -14,6 +14,7 @@
           @input="cInput"
         ></c-input>
       </c-input-item>
+      <el-button @click="submit">提交</el-button>
     </c-form>
   </div>
 </template>
@@ -55,6 +56,14 @@ export default {
   methods: {
     cInput(value) {
       console.log("cInput传进来的值", value);
+    },
+    submit() {
+      var a = {
+        title: "提示",
+        messgae: "提交成功",
+        duration: 1000
+      };
+      this.$createNotice(a);
     }
   }
 };
