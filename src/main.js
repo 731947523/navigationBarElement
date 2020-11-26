@@ -14,7 +14,8 @@ import Myplugin from "./utils/plugin";
 Vue.use(Myplugin);
 // 创建notice组件
 import createNotice from "@/utils/createNotice";
-Vue.prototype.$createNotice = createNotice;
+// Vue.prototype.$createNotice = createNotice;
+Vue.use(createNotice);
 //  引入element-ui
 import ElementUI from "element-ui";
 import "element-ui/lib/theme-chalk/index.css";

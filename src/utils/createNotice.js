@@ -2,7 +2,7 @@ import Vue from "vue";
 // 集成传进来的组件
 import notice from "./../components/notice/index.vue";
 // 参数
-function create(props) {
+function create(notice, props) {
   // 方案一
   // const vm = new Vue({
   //  // h是createElement  返回的是VNode，虚拟dom
@@ -36,4 +36,13 @@ function create(props) {
   };
   return comp;
 }
-export default create;
+// 导出形式1
+// export default create;
+// 导出形式2  使用use形式
+export default {
+  install(Vue) {
+    Vue.prototype.$createNotice = function(optios) {
+      return create(notice, optios);
+    };
+  }
+};
