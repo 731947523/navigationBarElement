@@ -4,16 +4,22 @@
     <c-form :user="user" :rules="rules">
       <!-- 用户名 -->
       <c-input-item :label="'姓名'" prop="name">
-        <c-input v-model="user.name" @input="cInput"></c-input>
+        <c-input
+          c="1"
+          :sex="'男'"
+          v-model="user.name"
+          @input="cInput"
+          :test-attr="testAttrs"
+        ></c-input>
       </c-input-item>
       <!-- 密码 -->
-      <c-input-item :label="'密码'" prop="password">
+      <!-- <c-input-item :label="'密码'" prop="password">
         <c-input
           :type="'password'"
           v-model="user.password"
           @input="cInput"
         ></c-input>
-      </c-input-item>
+      </c-input-item> -->
       <el-button @click="submit">提交</el-button>
     </c-form>
   </div>
@@ -26,6 +32,11 @@ import CInputItem from "./CInputItem";
 export default {
   data() {
     return {
+      testAttrs: {
+        name: "测试",
+        age: 16,
+        sex: "南"
+      },
       user: {
         name: "1",
         password: ""
