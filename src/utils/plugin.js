@@ -5,7 +5,7 @@
 import load from "../views/daohang/Base/directive/loading.vue";
 const Myplugin = {
   install(Vue, options) {
-    console.log("自己写的插件", options);
+    // console.log("自己写的插件", options);
     Vue.component("pluginTitle", load);
     Vue.prototype.$name = "李莹";
   }

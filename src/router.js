@@ -1,9 +1,13 @@
 import Vue from "vue";
-import Router from "vue-router";
+// import Router from "vue-router";
+import CRouter from "./cRouter/index";
+// 应用插件
 
-Vue.use(Router);
-
-const router = new Router({
+// Vue.use(Router);
+Vue.use(CRouter);
+// 创建实例
+const router = new CRouter({
+  // const router = new Router({
   mode: "history",
   base: process.env.BASE_URL,
   routes: [
@@ -60,8 +64,8 @@ const router = new Router({
     }
   ]
 });
-router.beforeEach((to, from, next) => {
-  // console.log(to, from)
-  next();
-});
+// router.beforeEach((to, from, next) => {
+//   // console.log(to, from)
+//   next();
+// });
 export default router;

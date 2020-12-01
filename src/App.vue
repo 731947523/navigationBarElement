@@ -1,31 +1,18 @@
 <template>
   <div id="app">
-    <el-container class="box">
-      <el-header>晨曦-----------头部</el-header>
-      <el-container class="el-main-box">
-        <el-aside width="200px" style="height:100%">
-          <!-- 左侧导航 -->
-          <app-home></app-home>
-        </el-aside>
-        <el-main>
-          <!-- 准备测试今天所看的自定义指令 -->
-          <!-- 面包屑 -->
-          <!-- <breadcrumb></breadcrumb> -->
-          <router-view />
-        </el-main>
-      </el-container>
-      <el-footer>底部</el-footer>
-    </el-container>
+    <router-link :to="'/default'">时刻-1</router-link>
+    <router-link :to="'/Base'">时刻-2</router-link>
+    <router-view></router-view>
   </div>
 </template>
 <script>
-import AppHome from "./views/home/index";
-import breadcrumb from "@/components/breadcrumb/index";
+// import AppHome from "./views/home/index";
+// import breadcrumb from "@/components/breadcrumb/index";
 export default {
-  components: {
-    AppHome,
-    breadcrumb
-  },
+  // components: {
+  //   AppHome,
+  //   breadcrumb
+  // },
   data() {
     return {
       title: "12234"

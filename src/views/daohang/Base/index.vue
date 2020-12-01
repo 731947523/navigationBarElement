@@ -1,6 +1,7 @@
 <template>
   <div>
-    <router-view></router-view>
+    基本
+    <!-- <router-view></router-view> -->
   </div>
 </template>
 <script>
