@@ -2,6 +2,17 @@
   <div id="app">
     <router-link :to="'/default'">时刻-1</router-link>
     <router-link :to="'/Base'">时刻-2</router-link>
+
+    <p @click="$store.commit('add')">
+      commit方案： counter: {{ $store.state.counter }}
+    </p>
+    <p @click="$store.dispatch('addAction')">
+      dispatch方案： counter {{ $store.state.counter }}
+    </p>
+    <p>double counter: {{ $store.getters.doubleCounter }}</p>
+    <p @click="$store.dispatch('asyncTest')">
+      async counter: {{ $store.state.counter }}
+    </p>
     <router-view></router-view>
   </div>
 </template>
@@ -17,6 +28,9 @@ export default {
     return {
       title: "12234"
     };
+  },
+  mounted() {
+    // console.log(this.$store);
   }
 };
 </script>

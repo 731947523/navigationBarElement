@@ -1,7 +1,8 @@
 import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
-import store from "./store";
+// import store from "./store";
+import store from "./cVuex/index";
 // 自定义指令
 import directive from "./utils/directive";
 import "./style/reset.css";

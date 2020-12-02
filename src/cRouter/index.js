@@ -11,18 +11,23 @@ class CRouter {
     // 需要创建响应式的current属性 this.current = "/default";
     Vue.util.defineReactive(this, "current", "/default");
 
-    // 监听hashchange事件
-    window.addEventListener("hashchange", this.onHashChange.bind(this));
-    window.addEventListener("load", this.onHashChange.bind(this));
-
     // 创建一个路由映射表
     this.routeMap = {};
     options.routes.forEach(route => {
       this.routeMap[route.path] = route;
     });
+
+    // 监听hashchange事件
+    window.addEventListener("hashchange", this.onHashChange.bind(this));
+    window.addEventListener("load", this.onHashChange.bind(this));
   }
   onHashChange() {
-    this.current = window.location.hash.slice(1);
+    // console
+    if (window.location.hash == "") {
+      this.current = this.routeMap["/"].redirect;
+    } else {
+      this.current = window.location.hash.slice(1);
+    }
   }
 }
 // 存在
