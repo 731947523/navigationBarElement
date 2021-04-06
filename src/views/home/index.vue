@@ -84,7 +84,8 @@ export default {
         }
       ],
       activePath: 0, // 默认左边菜单栏路径
-      activeArray: [0]
+      activeArray: [0],
+      defaultActive: 0
     };
   },
   created() {
