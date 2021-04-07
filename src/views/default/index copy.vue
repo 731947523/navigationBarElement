@@ -35,26 +35,26 @@
 // import subButtom from "./soltText";
 // import sonData from "./sonData";
 export default {
-  name: "default",
-  data() {
+  name: 'default',
+  data () {
     return {
       list: [
-        { text: "我的名字", id: 1 },
-        { text: "cxs", id: 2 },
-        { text: "年龄", id: 3 },
-        { text: "24", id: 4 }
+        { text: '我的名字', id: 1 },
+        { text: 'cxs', id: 2 },
+        { text: '年龄', id: 3 },
+        { text: '24', id: 4 }
       ]
-    };
+    }
   },
   components: {
     // subButtom
     // sonData
   },
-  created() {
-    this.list = window.cxs.dataJson.all.list;
+  created () {
+    this.list = window.cxs.dataJson.all.list
     // console.log(this.list[0].content);
   }
-};
+}
 </script>
 <style lang="less" scoped>
 .wrap {

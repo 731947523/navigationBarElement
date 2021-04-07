@@ -8,26 +8,26 @@
 </template>
 <script>
 export default {
-  data() {
+  data () {
     return {
       routeList: []
-    };
-  },
-  watch: {
-    $route(to, from) {
-      // console.log('路由变化',to, from)
-      this.activeRoute(to, from);
     }
   },
-  created() {
+  watch: {
+    $route (to, from) {
+      // console.log('路由变化',to, from)
+      this.activeRoute(to, from)
+    }
+  },
+  created () {
     // console.log('进图',this)
   },
   methods: {
-    activeRoute(to, from) {
+    activeRoute (to, from) {
       // console.log("目的页面", to, to.matched);
-      this.routeList = to.matched;
+      this.routeList = to.matched
     }
   }
-};
+}
 </script>
 <style lang="less" scoped></style>

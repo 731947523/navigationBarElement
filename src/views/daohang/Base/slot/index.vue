@@ -20,10 +20,10 @@
   </div>
 </template>
 <script>
-import message from "@/components/slot/index";
+import message from '@/components/slot/index'
 export default {
   components: {
     message
   }
-};
+}
 </script>

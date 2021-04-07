@@ -26,38 +26,38 @@
 </template>
 
 <script>
-import cForm from "./cForm.vue";
-import cInput from "./CInput";
-import CInputItem from "./CInputItem";
+import cForm from './cForm.vue'
+import cInput from './CInput'
+import CInputItem from './CInputItem'
 export default {
-  data() {
+  data () {
     return {
       testAttrs: {
-        name: "测试",
+        name: '测试',
         age: 16,
-        sex: "南"
+        sex: '南'
       },
       user: {
-        name: "1",
-        password: ""
+        name: '1',
+        password: ''
       },
       rules: {
         name: [
           {
             required: true,
-            message: "请输入用户名",
-            trigger: "blur"
+            message: '请输入用户名',
+            trigger: 'blur'
           }
         ],
         password: [
           {
             required: true,
-            message: "不能为空",
-            trigger: "blur"
+            message: '不能为空',
+            trigger: 'blur'
           }
         ]
       }
-    };
+    }
   },
   components: {
     cForm,
@@ -65,19 +65,19 @@ export default {
     CInputItem
   },
   methods: {
-    cInput(value) {
-      console.log("cInput传进来的值", value);
+    cInput (value) {
+      console.log('cInput传进来的值', value)
     },
-    submit() {
+    submit () {
       var a = {
-        title: "提示",
-        messgae: "提交成功",
+        title: '提示',
+        messgae: '提交成功',
         duration: 1000
-      };
-      this.$createNotice(a);
+      }
+      this.$createNotice(a)
     }
   }
-};
+}
 </script>
 
 <style lang="less" scoped></style>

@@ -9,19 +9,19 @@
 </template>
 <script>
 export default {
-  data() {
+  data () {
     return {
       isShow: false
-    };
+    }
   },
   props: {
     title: {
       type: String,
-      default: "默认标题"
+      default: '默认标题'
     },
     content: {
       type: String,
-      default: "默认信息内容"
+      default: '默认信息内容'
     },
     duration: {
       type: [Number, String],
@@ -29,16 +29,16 @@ export default {
     }
   },
   methods: {
-    show() {
-      this.isShow = true;
-      setTimeout(this.hide, this.duration);
+    show () {
+      this.isShow = true
+      setTimeout(this.hide, this.duration)
     },
-    hide() {
-      this.isShow = false;
-      this.remove();
+    hide () {
+      this.isShow = false
+      this.remove()
     }
   }
-};
+}
 </script>
 <style lang="less" scoped>
 .notice-wrap {

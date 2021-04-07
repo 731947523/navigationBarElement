@@ -20,9 +20,9 @@
 </template>
 <script>
 export default {
-  data() {
-    return {};
+  data () {
+    return {}
   },
-  props: ["title"]
-};
+  props: ['title']
+}
 </script>

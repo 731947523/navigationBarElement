@@ -12,6 +12,7 @@ import createNotice from '@/utils/createNotice'
 //  引入element-ui
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
+console.warn('test ')
 for (const key in directive) {
   Vue.directive(key, directive[key])
 }

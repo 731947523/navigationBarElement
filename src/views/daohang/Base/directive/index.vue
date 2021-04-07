@@ -11,14 +11,14 @@
 </template>
 <script>
 export default {
-  data() {
-    return {};
+  data () {
+    return {}
   },
   methods: {
-    search() {
-      console.log("搜索");
+    search () {
+      console.log('搜索')
     }
   }
-};
+}
 </script>
 <style lang="less" scoped></style>

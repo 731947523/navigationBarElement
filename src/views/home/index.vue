@@ -12,42 +12,42 @@
   </el-menu>
 </template>
 <script>
-import defaultHome from "@/components/main/index.vue";
+import defaultHome from '@/components/main/index.vue'
 export default {
   components: {
     defaultHome
   },
-  data() {
+  data () {
     return {
       list: [
         {
-          title: "Vue",
-          index: "0",
-          iconClass: "el-icon-setting",
-          path: "/default"
+          title: 'Vue',
+          index: '0',
+          iconClass: 'el-icon-setting',
+          path: '/default'
         },
         {
-          title: "基础",
-          index: "1",
-          iconClass: "el-icon-location",
+          title: '基础',
+          index: '1',
+          iconClass: 'el-icon-location',
           children: [
             {
-              title: "插槽",
-              index: "1-1",
-              iconClass: "",
-              path: "/Base/slot"
+              title: '插槽',
+              index: '1-1',
+              iconClass: '',
+              path: '/Base/slot'
             },
             {
-              title: "自定义指令",
-              index: "1-1",
-              iconClass: "",
-              path: "/Base/directive"
+              title: '自定义指令',
+              index: '1-1',
+              iconClass: '',
+              path: '/Base/directive'
             },
             {
-              title: "CForm表单",
-              index: "1-1",
-              iconClass: "",
-              path: "/Base/form"
+              title: 'CForm表单',
+              index: '1-1',
+              iconClass: '',
+              path: '/Base/form'
             }
             // {
             //   title: "自定义指令",
@@ -64,49 +64,49 @@ export default {
           ]
         },
         {
-          title: "导航二",
+          title: '导航二',
 
-          index: "2",
-          iconClass: "el-icon-menu",
+          index: '2',
+          iconClass: 'el-icon-menu',
           children: [
             {
-              title: "选项1",
-              index: "2-1",
-              path: "/dao2/xuan1"
+              title: '选项1',
+              index: '2-1',
+              path: '/dao2/xuan1'
             }
           ]
         },
         {
-          title: "导航三",
-          index: "3",
-          iconClass: "el-icon-setting",
-          path: "/dao3/index"
+          title: '导航三',
+          index: '3',
+          iconClass: 'el-icon-setting',
+          path: '/dao3/index'
         }
       ],
       activePath: 0, // 默认左边菜单栏路径
       activeArray: [0],
       defaultActive: 0
-    };
+    }
   },
-  created() {
-    if (localStorage.getItem("localPath")) {
-      let localPath = JSON.parse(localStorage.getItem("localPath"));
-      let localLength = localPath.length;
-      this.activePath = localPath[localLength - 1];
-      this.activeArray = localPath;
-      console.log(this.activePath, "end-----------");
+  created () {
+    if (localStorage.getItem('localPath')) {
+      const localPath = JSON.parse(localStorage.getItem('localPath'))
+      const localLength = localPath.length
+      this.activePath = localPath[localLength - 1]
+      this.activeArray = localPath
+      console.log(this.activePath, 'end-----------')
     }
   },
   methods: {
-    handleOpen(key, keyPath) {
+    handleOpen (key, keyPath) {
       // console.log(key, keyPath, "el-menu组件上的内容");
     },
-    handleSelect(key, keyPath) {
-      console.log(key, keyPath, "el-menu 菜单激活回调");
-      localStorage.setItem("localPath", JSON.stringify(keyPath));
+    handleSelect (key, keyPath) {
+      console.log(key, keyPath, 'el-menu 菜单激活回调')
+      localStorage.setItem('localPath', JSON.stringify(keyPath))
     }
   }
-};
+}
 </script>
 <style lang="less" scoped>
 .el-menu {

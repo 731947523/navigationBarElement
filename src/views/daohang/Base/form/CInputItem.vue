@@ -8,37 +8,37 @@
 </template>
 
 <script>
-import Schema from "async-validator";
+import Schema from 'async-validator'
 export default {
-  inject: ["user"],
+  inject: ['user'],
   props: {
     label: {
       type: String,
-      default: ""
+      default: ''
     },
     prop: {
       type: String
     }
   },
-  data() {
+  data () {
     return {
-      error: "" // error为空  代表通过
-    };
+      error: '' // error为空  代表通过
+    }
   },
-  mounted() {
-    this.$on("validate", () => {
-      this.validate();
-    });
+  mounted () {
+    this.$on('validate', () => {
+      this.validate()
+    })
   },
   methods: {
-    validate() {
+    validate () {
       //   当前的规则
       // 获取对应FormItem校验规则
-      const rules = this.user.rules[this.prop]; // 获取校验值
+      const rules = this.user.rules[this.prop] // 获取校验值
       //   传进来的是哪个input
-      const value = this.user.user[this.prop]; // 校验描述对象
-      const descriptor = { [this.prop]: rules }; // 创建校验器
-      const schema = new Schema(descriptor); // 返回Promise，没有触发catch就说明验证通过
+      const value = this.user.user[this.prop] // 校验描述对象
+      const descriptor = { [this.prop]: rules } // 创建校验器
+      const schema = new Schema(descriptor) // 返回Promise，没有触发catch就说明验证通过
       return schema.validate(
         {
           [this.prop]: value
@@ -46,17 +46,17 @@ export default {
         errors => {
           if (errors) {
             // 将错误信息显示
-            this.error = errors[0].message;
+            this.error = errors[0].message
           } else {
             // 校验通过
-            this.error = "";
+            this.error = ''
           }
         }
-      );
+      )
       //   console.log(this.user.user[this.prop]);
     }
   }
-};
+}
 </script>
 
 <style lang="less" scoped>

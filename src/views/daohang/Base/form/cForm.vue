@@ -17,10 +17,10 @@ cForm
 ----------------------cInput|-- 仅做双向绑定，单一
 */
 export default {
-  provide() {
+  provide () {
     return {
       user: this
-    };
+    }
   },
   props: {
     user: {
@@ -33,7 +33,7 @@ export default {
       default: () => {}
     }
   }
-};
+}
 </script>
 
 <style lang="scss" scoped></style>

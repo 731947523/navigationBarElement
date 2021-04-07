@@ -15,18 +15,18 @@
 </template>
 <script>
 export default {
-  name: "sonData",
-  props: ["list"],
-  data() {
+  name: 'sonData',
+  props: ['list'],
+  data () {
     return {
       hotel: {
-        name: "橘子",
-        address: "朝阳区定福庄犀利",
+        name: '橘子',
+        address: '朝阳区定福庄犀利',
         type: 3
       }
-    };
+    }
   }
-};
+}
 </script>
 <style lang="less" scoped>
 li {

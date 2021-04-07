@@ -8,10 +8,10 @@
 </template>
 
 <script>
-import CAttrs from "./attrs";
+import CAttrs from './attrs'
 export default {
-  data() {
-    return {};
+  data () {
+    return {}
   },
   components: {
     CAttrs
@@ -19,11 +19,11 @@ export default {
   props: {
     value: {
       type: String,
-      default: ""
+      default: ''
     },
     type: {
       type: String,
-      default: "text"
+      default: 'text'
     },
     sex: {
       type: String
@@ -33,15 +33,15 @@ export default {
     }
   },
   methods: {
-    onInput(e) {
+    onInput (e) {
       // 派发input事件
-      this.$emit("input", e.target.value);
+      this.$emit('input', e.target.value)
 
       // 通知父级
-      this.$parent.$emit("validate", e.target.value);
+      this.$parent.$emit('validate', e.target.value)
     }
   }
-};
+}
 </script>
 
 <style lang="less" scoped>

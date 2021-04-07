@@ -21,12 +21,12 @@
 </template>
 <script>
 export default {
-  props: ["item"],
-  name: "defaultHome",
-  data() {
-    return {};
+  props: ['item'],
+  name: 'defaultHome',
+  data () {
+    return {}
   }
-};
+}
 </script>
 <style lang="less" scoped>
 /deep/.el-submenu,

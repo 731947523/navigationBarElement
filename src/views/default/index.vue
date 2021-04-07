@@ -15,13 +15,13 @@
 // import directivesInput from "./input";
 
 export default {
-  data() {
-    return {};
+  data () {
+    return {}
   },
   components: {
     // directivesInput
   },
-  created() {}
-};
+  created () {}
+}
 </script>
 <style lang="less" scoped></style>
