@@ -1,50 +1,50 @@
-import Vue from "vue";
-import Router from "vue-router";
+import Vue from 'vue'
+import Router from 'vue-router'
 
-Vue.use(Router);
+Vue.use(Router)
 
 const router = new Router({
-  mode: "history",
+  mode: 'history',
   base: process.env.BASE_URL,
   routes: [
     {
-      path: "/",
-      redirect: "/default"
+      path: '/',
+      redirect: '/default'
     },
     {
-      path: "/default",
-      component: resolve => require(["@/views/default/index"], resolve)
+      path: '/default',
+      component: resolve => require(['@/views/default/index'], resolve)
     },
     {
-      path: "/Base",
+      path: '/Base',
       meta: {
-        title: "导航一"
+        title: '导航一'
       },
-      component: resolve => require(["@/views/daohang/Base/index"], resolve),
+      component: resolve => require(['@/views/daohang/Base/index'], resolve),
       children: [
         {
-          path: "/Base/slot",
+          path: '/Base/slot',
           meta: {
-            title: "插槽"
+            title: '插槽'
           },
           component: resolve =>
-            require(["@/views/daohang/Base/slot/index"], resolve)
+            require(['@/views/daohang/Base/slot/index'], resolve)
         },
         {
-          path: "/Base/form",
+          path: '/Base/form',
           meta: {
-            title: "实现表单"
+            title: '实现表单'
           },
           component: resolve =>
-            require(["@/views/daohang/Base/form/index"], resolve)
+            require(['@/views/daohang/Base/form/index'], resolve)
         },
         {
-          path: "/Base/directive",
+          path: '/Base/directive',
           meta: {
-            title: "指令"
+            title: '指令'
           },
           component: resolve =>
-            require(["@/views/daohang/Base/directive/index"], resolve),
+            require(['@/views/daohang/Base/directive/index'], resolve),
           children: [
             // {
             //   path: "child2",
@@ -59,9 +59,9 @@ const router = new Router({
       ]
     }
   ]
-});
+})
 router.beforeEach((to, from, next) => {
   // console.log(to, from)
-  next();
-});
-export default router;
+  next()
+})
+export default router
