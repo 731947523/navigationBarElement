@@ -19,19 +19,19 @@
   </div>
 </template>
 <script>
-import AppHome from "./views/home/index";
-import breadcrumb from "@/components/breadcrumb/index";
+import AppHome from './views/home/index'
+import breadcrumb from '@/components/breadcrumb/index'
 export default {
   components: {
     AppHome,
     breadcrumb
   },
-  data() {
+  data () {
     return {
-      title: "12234"
-    };
+      title: '12234'
+    }
   }
-};
+}
 </script>
 
 <style lang="less" scoped>
