@@ -38,6 +38,9 @@ export default {
   methods:{
     add(){
       console.log('第一次提交对应的add方法')
+    },
+    update(){
+      console.log('第二次更新，增加update方法')
     }
   }
 };
