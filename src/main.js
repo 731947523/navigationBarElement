@@ -19,6 +19,7 @@ Vue.use(createNotice);
 //  引入element-ui
 import ElementUI from "element-ui";
 import "element-ui/lib/theme-chalk/index.css";
+console.log('临时  test')
 
 Vue.config.productionTip = false;
 Vue.use(ElementUI);
