@@ -32,6 +32,7 @@ export default {
     };
   },
   mounted(){
+    console.log('临时 test')
     console.log('------------------当前分支的第一次提交------')
     this.add()
   },
