@@ -1,6 +1,6 @@
 import Vue from "vue";
 import Router from "vue-router";
-
+console.log('临时 test route')
 Vue.use(Router);
 
 const router = new Router({
