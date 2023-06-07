@@ -32,7 +32,7 @@ export default {
     };
   },
   mounted(){
-    console.log('------------------当前分支的第3次提交------')
+    console.log('------------------当前分支的第一次提交------')
     this.add()
   },
   methods:{
