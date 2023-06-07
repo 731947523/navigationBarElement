@@ -30,6 +30,15 @@ export default {
     return {
       title: "12234"
     };
+  },
+  mounted(){
+    console.log('------------------当前分支的第一次提交------')
+    this.add()
+  },
+  methods:{
+    add(){
+      console.log('第一次提交对应的add方法')
+    }
   }
 };
 </script>
